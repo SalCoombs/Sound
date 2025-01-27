@@ -8,3 +8,6 @@ def sin(time_arr, frequency, volume=1):
 
 def time(duration):
     return np.linspace(0, duration, duration*RATE)
+
+def beat_duration(bpm):
+    return time(bpm / 60)
