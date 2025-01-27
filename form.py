@@ -19,7 +19,3 @@ def add_at_time(target, source, time, time_arr):
     positions = np.where(time_arr == time)
     for position in positions:
         add_at_pos(target, source, position)
-
-
-def beat_duration(bpm):
-    return time(bpm / 60)

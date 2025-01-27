@@ -2,6 +2,7 @@ import pyaudio
 import numpy as np
 from constants import FORMAT, CHANNELS, RATE, CHUNK, VOLUME
 import matplotlib.pyplot as plt
+from form import sin
 
 
 def output(audio):
@@ -43,3 +44,11 @@ def plot(audio):
     plt.legend()
     plt.tight_layout()
     plt.show()
+
+def melody(notes):
+    """Plays a sequence of notes
+    """
+    note_array = []
+    for (note, duration) in notes:
+        note_array.append(sin(duration, note))
+    output(note_array)
