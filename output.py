@@ -1,8 +1,8 @@
 import pyaudio
 import numpy as np
-from scipy.special import comb
 from constants import FORMAT, CHANNELS, RATE, CHUNK, VOLUME
 import matplotlib.pyplot as plt
+
 
 def output(audio):
     p = pyaudio.PyAudio()
@@ -29,6 +29,7 @@ def output(audio):
     stream.stop_stream()
     stream.close()
     p.terminate()
+
 
 def plot(audio):
     plt.figure(figsize=(10, 4))
