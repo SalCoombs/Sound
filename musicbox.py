@@ -1,6 +1,6 @@
 from form import time
 
-BPM = 120
+
 
 def beat_duration(bpm):
     return time(bpm / 60)
@@ -10,6 +10,11 @@ class NoteDuration:
     half = beat_duration(BPM*2)
     whole = beat_duration(BPM*4)
     eighth = beat_duration(BPM/2)
+
+class Song:
+    def __init__(self, BPM, melody):
+        self.BPM = BPM
+        self.melody = melody
 
 class NOTES:
     C = 261.63
